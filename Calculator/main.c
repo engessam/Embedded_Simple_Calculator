@@ -139,6 +139,13 @@ int main()
         _delay_ms(100);
 
         // Clear the LCD screen for the next calculation
+        uint8 temp2= KEYPAD_getPressedKey();
+     while(temp2!=13)
+     {
+    	 temp2= KEYPAD_getPressedKey();
+    	 _delay_ms(200);
+     }
         LCD_clearScreen();
+        _delay_ms(200);
     }
 }
